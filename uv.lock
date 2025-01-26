@@ -117,6 +117,18 @@ wheels = [
 ]
 
 [[package]]
+name = "dash-mantine-components"
+version = "0.15.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dash" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/17/00/dad060eaeb9b9324d91ca433b9c7445c328e77a1efa59f992639c4a0932b/dash_mantine_components-0.15.2.tar.gz", hash = "sha256:28a700aa67240cc8c8c23900912d449a0a636b9cb693a23f8bea23cadde511ef", size = 920074 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c8/5d/92f8dbb3c19614f2cb05ff799932b8ddd1dbecca813c65ad0b66ba890529/dash_mantine_components-0.15.2-py3-none-any.whl", hash = "sha256:1a73456037e5f691143d3ca6e9afda23bb1b35148393322deeefb3eb78db0f92", size = 1231931 },
+]
+
+[[package]]
 name = "dash-table"
 version = "5.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -131,10 +143,16 @@ version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "dash" },
+    { name = "dash-mantine-components" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "dash", specifier = ">=2.18.2" }]
+requires-dist = [
+    { name = "dash", specifier = ">=2.18.2" },
+    { name = "dash-mantine-components", specifier = ">=0.15.2" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
 
 [[package]]
 name = "flask"
@@ -261,6 +279,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/79/4f/428f6d959818d7425a94c190a6b26fbc58035cbef40bf249be0b62a9aedd/plotly-5.24.1.tar.gz", hash = "sha256:dbc8ac8339d248a4bcc36e08a5659bacfe1b079390b8953533f4eb22169b4bae", size = 9479398 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e5/ae/580600f441f6fc05218bd6c9d5794f4aef072a7d9093b291f1c50a9db8bc/plotly-5.24.1-py3-none-any.whl", hash = "sha256:f67073a1e637eb0dc3e46324d9d51e2fe76e9727c892dde64ddf1e1b51f29089", size = 19054220 },
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bc/57/e84d88dfe0aec03b7a2d4327012c1627ab5f03652216c63d49846d7a6c58/python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca", size = 39115 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/3e/b68c118422ec867fa7ab88444e1274aa40681c606d59ac27de5a5588f082/python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a", size = 19863 },
 ]
 
 [[package]]

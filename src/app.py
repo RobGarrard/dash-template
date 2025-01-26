@@ -5,18 +5,26 @@
 #----------------------------------------------------------------------------#
 
 # Libraries
+
+from dotenv import load_dotenv
+
 import dash
 from dash import Dash, html
+import dash_mantine_components as dmc
+
+from .components import Header
+
+load_dotenv()
 
 app = Dash(__name__, use_pages=True)
 
 #----------------------------------------------------------------------------#
 # main method
 
-app.layout = html.Div(
+app.layout = dmc.MantineProvider(
     id="app-layout",
     children=[
-        html.H1("Dash App"),
+        Header("My App"),
         html.A("Homepage", href="/"),
         html.A("Other Page", href="/other_page"),
         html.Div(id="page-content"),
