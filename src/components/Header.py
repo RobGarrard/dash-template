@@ -3,6 +3,7 @@
 from dash import html
 import dash_mantine_components as dmc
 
+from theme.theme import theme
 
 #----------------------------------------------------------------------------#
 # Component
@@ -13,13 +14,35 @@ def Header(app_title: str) -> html.Div:
     page navigation links. The app title is next to the hamburger menu.
     """
 
-    hamburger_menu = dmc.Burger(id='hamburger-menu')
+    hamburger_menu = dmc.Burger(
+        id='hamburger-menu',
+        color=theme['white'],
+        style={
+            'margin': '4px',
+        }
+    )
 
-    app_title = html.H1(app_title, id='app-title')
+    app_title = html.H1(
+        app_title,
+        id='app-title',
+        style={
+            'color': theme['white'],
+            'margin': '4px',
+        }
+        )
 
     header = html.Div(
         id='header',
-        children=[hamburger_menu, app_title]
+        children=[hamburger_menu, app_title],
+        style={
+            'background-color': theme['colors']['primary'][0],
+            'display': 'flex',
+            'align-items': 'center',
+            'justify-content': 'flex-start',
+            'padding': '0px 8px',
+            'min-height': '64px',
+        }
+
     )
 
     return header

@@ -13,6 +13,7 @@ from dash import Dash, html
 import dash_mantine_components as dmc
 
 from .components import Header
+from .theme.theme import theme
 
 load_dotenv()
 
@@ -23,6 +24,7 @@ app = Dash(__name__, use_pages=True)
 
 app.layout = dmc.MantineProvider(
     id="app-layout",
+    theme=theme,
     children=[
         Header("My App"),
         html.A("Homepage", href="/"),
