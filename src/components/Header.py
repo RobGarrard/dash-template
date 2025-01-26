@@ -18,7 +18,7 @@ def Header(app_title: str) -> html.Div:
         id='hamburger-menu',
         color=theme['white'],
         style={
-            'margin': '4px',
+            'margin': '1rem',
         }
     )
 
@@ -27,7 +27,7 @@ def Header(app_title: str) -> html.Div:
         id='app-title',
         style={
             'color': theme['white'],
-            'margin': '4px',
+            'margin': '1rem',
         }
         )
 
@@ -39,7 +39,6 @@ def Header(app_title: str) -> html.Div:
             'display': 'flex',
             'align-items': 'center',
             'justify-content': 'flex-start',
-            'padding': '0px 8px',
             'min-height': '64px',
         }
 
