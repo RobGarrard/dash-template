@@ -12,6 +12,10 @@ import dash
 from dash import Dash, html
 import dash_mantine_components as dmc
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 from .components import Header, Footer
 from .theme.theme import theme
 
