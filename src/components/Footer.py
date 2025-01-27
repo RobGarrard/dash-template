@@ -24,9 +24,23 @@ def Footer() -> html.Div:
         }
     )
 
+    company_text = dmc.Text(
+        children=['Company Name'],
+        size='lg',
+    )
+
+    company_summary = html.Div(
+        children=[company_logo, company_text],
+        style={
+            'display': 'flex',
+            'align-items': 'center',
+            'justify-content': 'center',
+        }
+    )
+
     footer = html.Div(
         id='footer',
-        children=[company_logo],
+        children=[company_summary],
         style={
             'background-color': theme['colors']['gray'][0],
             'display': 'flex',

@@ -12,6 +12,8 @@ import dash_mantine_components as dmc
 
 from theme.theme import theme
 
+from components import ChartContainer
+
 # ----------------------------------------------------------------------------#
 # Register page
 
@@ -35,7 +37,9 @@ text_block = dmc.Paper(
 
 full_width_chart = html.Div(
     id="homepage-full-width-chart",
-    children=[html.H2("Full Width Chart")],
+    children=[
+        ChartContainer(id='chart-1'),
+    ],
     style={
         "width": "100%",
         "height": "500px",
@@ -50,7 +54,9 @@ two_charts = html.Div(
     id="homepage-two-charts",
     children=[
         html.Div(
-            children=[html.H2("Chart 1")],
+            children=[
+                ChartContainer(id='chart-2'),
+            ],
             style={
                 "width": "100%",
                 "min-height": "500px",
@@ -60,7 +66,9 @@ two_charts = html.Div(
             },
         ),
         html.Div(
-            children=[html.H2("Chart 2")],
+            children=[
+                ChartContainer(id='chart-3'),
+            ],
             style={
                 "width": "100%",
                 "min-height": "500px",
@@ -81,7 +89,7 @@ three_charts = html.Div(
     id="homepage-two-charts",
     children=[
         html.Div(
-            children=[html.H2("Chart 3")],
+            children=[ChartContainer(id='chart-4')],
             style={
                 "width": "100%",
                 "min-height": "500px",
@@ -91,7 +99,7 @@ three_charts = html.Div(
             },
         ),
         html.Div(
-            children=[html.H2("Chart 4")],
+            children=[ChartContainer(id='chart-5')],
             style={
                 "width": "100%",
                 "min-height": "500px",
@@ -101,7 +109,7 @@ three_charts = html.Div(
             },
         ),
         html.Div(
-            children=[html.H2("Chart 5")],
+            children=[ChartContainer(id='chart-6')],
             style={
                 "width": "100%",
                 "min-height": "500px",

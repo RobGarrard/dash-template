@@ -9,7 +9,7 @@
 from dotenv import load_dotenv
 
 import dash
-from dash import Dash, html
+from dash import Dash, html, dcc
 import dash_mantine_components as dmc
 
 import logging
@@ -18,6 +18,8 @@ logger = logging.getLogger(__name__)
 
 from .components import Header, Footer
 from .theme.theme import theme
+from .callbacks.initial_load import initial_load
+from .callbacks.homepage import *
 
 load_dotenv()
 
@@ -44,6 +46,9 @@ app.layout = dmc.MantineProvider(
                     }
                 ),
                 Footer(),
+                dcc.Store(id='cached-data'),
+                # This is a dummy interval to trigger the initial load.
+                dcc.Interval(id='interval', max_intervals=0),
             ],
             style={
                 'display': 'grid',
