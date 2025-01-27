@@ -12,12 +12,12 @@ from dash import html
 # ----------------------------------------------------------------------------#
 # Register page
 
-dash.register_page(__name__, path="/other_page", order=1)
+dash.register_page(__name__, path="/a-third-page", order=2)
 
 # ----------------------------------------------------------------------------#
 # Components
 
-page_title = html.H1("Other Page")
+page_title = html.H1("Yet Another Page")
 
 full_width_chart = html.Div(
     id="other-page-full-width-chart",

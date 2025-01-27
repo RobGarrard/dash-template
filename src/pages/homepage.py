@@ -10,15 +10,28 @@ import dash
 from dash import html
 import dash_mantine_components as dmc
 
+from theme.theme import theme
+
 # ----------------------------------------------------------------------------#
 # Register page
 
-dash.register_page(__name__, path='/')
+dash.register_page(__name__, path='/', order=0)
 
 # ----------------------------------------------------------------------------#
 # Components
 
-page_title = html.H1("Homepage")
+page_title = html.H1(
+    "Homepage",
+    style={
+        'color': theme['colors']['primary'][0],
+    }
+)
+
+text_block = dmc.Paper(
+    children=[
+        html.P("This is a text block. You can describe stuff here."),
+    ],
+)
 
 full_width_chart = html.Div(
     id="homepage-full-width-chart",
@@ -109,8 +122,10 @@ three_charts = html.Div(
 # Layout
 
 layout = html.Div(
-    id="homepage-layout", children=[
+    id="homepage-layout",
+    children=[
         page_title,
+        text_block,
         full_width_chart,
         two_charts,
         three_charts,

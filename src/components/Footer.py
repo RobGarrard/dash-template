@@ -20,7 +20,7 @@ def Footer() -> html.Div:
         }
         )
 
-    header = html.Div(
+    footer = html.Div(
         id='footer',
         children=[company_logo],
         style={
@@ -28,10 +28,11 @@ def Footer() -> html.Div:
             'display': 'flex',
             'align-items': 'center',
             'justify-content': 'flex-start',
+            'padding': '0 1rem',
         }
 
     )
 
-    return header
+    return footer
 #----------------------------------------------------------------------------#
 # Callbacks
