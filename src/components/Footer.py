@@ -20,6 +20,7 @@ def Footer() -> html.Div:
             'max-height': '3rem',
             'display': 'block',
             'margin': 'auto 0',
+            'padding': '4px',
         }
     )
 
