@@ -13,12 +13,15 @@ def Footer() -> html.Div:
     Grey background. Has company logo in bottom left.
     """
 
-    company_logo = html.H3(
-        "Company Logo",
+    company_logo = html.Img(
+        src='assets/company_logo.svg',
+        alt='Company Logo',
         style={
-            'color': theme['white'],
+            'max-height': '3rem',
+            'display': 'block',
+            'margin': 'auto 0',
         }
-        )
+    )
 
     footer = html.Div(
         id='footer',
