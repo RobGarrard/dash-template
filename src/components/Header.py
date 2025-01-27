@@ -39,7 +39,7 @@ def Header(app_title: str) -> html.Div:
             'display': 'flex',
             'align-items': 'center',
             'justify-content': 'flex-start',
-            'min-height': '64px',
+            'min-height': '32px',
         }
 
     )

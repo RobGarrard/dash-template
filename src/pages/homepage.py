@@ -8,6 +8,7 @@
 
 import dash
 from dash import html
+import dash_mantine_components as dmc
 
 # ----------------------------------------------------------------------------#
 # Register page
@@ -26,6 +27,81 @@ full_width_chart = html.Div(
         "width": "100%",
         "height": "500px",
         "background-color": "lightgrey",
+        "display": "grid",
+        "place-items": "center",
+    },
+)
+
+# Grid of 2
+two_charts = html.Div(
+    id="homepage-two-charts",
+    children=[
+        html.Div(
+            children=[html.H2("Chart 1")],
+            style={
+                "width": "100%",
+                "min-height": "500px",
+                "background-color": "lightgrey",
+                "display": "grid",
+                "place-items": "center",
+            },
+        ),
+        html.Div(
+            children=[html.H2("Chart 2")],
+            style={
+                "width": "100%",
+                "min-height": "500px",
+                "background-color": "lightgrey",
+                "display": "grid",
+                "place-items": "center",
+            },
+        ),
+    ],
+    style={
+        "display": "grid",
+        "grid-template-columns": "1fr 1fr",
+        "gap": "1rem",
+    },
+)
+
+three_charts = html.Div(
+    id="homepage-two-charts",
+    children=[
+        html.Div(
+            children=[html.H2("Chart 3")],
+            style={
+                "width": "100%",
+                "min-height": "500px",
+                "background-color": "lightgrey",
+                "display": "grid",
+                "place-items": "center",
+            },
+        ),
+        html.Div(
+            children=[html.H2("Chart 4")],
+            style={
+                "width": "100%",
+                "min-height": "500px",
+                "background-color": "lightgrey",
+                "display": "grid",
+                "place-items": "center",
+            },
+        ),
+        html.Div(
+            children=[html.H2("Chart 5")],
+            style={
+                "width": "100%",
+                "min-height": "500px",
+                "background-color": "lightgrey",
+                "display": "grid",
+                "place-items": "center",
+            },
+        ),
+    ],
+    style={
+        "display": "grid",
+        "grid-template-columns": "1fr 1fr 1fr",
+        "gap": "1rem",
     },
 )
 
@@ -33,5 +109,16 @@ full_width_chart = html.Div(
 # Layout
 
 layout = html.Div(
-    id="homepage-layout", children=[page_title, full_width_chart]
+    id="homepage-layout", children=[
+        page_title,
+        full_width_chart,
+        two_charts,
+        three_charts,
+    ],
+    style={
+        # Place content in one column with a vertical gap of 1rem between each
+        # element
+        "display": "grid",
+        "gap": "1rem", 
+    }
 )

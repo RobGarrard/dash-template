@@ -12,7 +12,7 @@ import dash
 from dash import Dash, html
 import dash_mantine_components as dmc
 
-from .components import Header
+from .components import Header, Footer
 from .theme.theme import theme
 
 load_dotenv()
@@ -31,17 +31,20 @@ app.layout = dmc.MantineProvider(
                 Header("My App"),
                 dmc.Paper(
                     children=[
-                        html.A("Homepage", href="/"),
-                        html.A("Other Page", href="/other_page"),
                         html.Div(id="page-content"),
                         dash.page_container,
                     ],
                     style={
                         'padding': '1rem',
+                        'overflow': 'auto',
                     }
-                )
+                ),
+                Footer(),
             ],
             style={
+                'display': 'grid',
+                'grid-template-rows': 'auto 1fr auto',
+                'height': '100vh',
                 "margin": "0 auto",
             }
         )
